@@ -47,14 +47,16 @@ sources:
     type: paper
     authors: ["Frederik Garbe", "Robert Hancock", "Jan Hladký", "Maryam Sharifzadeh"]
     id: "arxiv:2010.07854"
-    relationship: background
+    relationship: adapts
     author_endorsement: not-contacted
     note: >-
-      Discrete Analysis 2023:8. Definitions 3.3, 3.5, 3.7, 4.1-4.3, Section
-      2.4.1 and Conjecture 12.4 (arXiv v3; 12.5 in v2) are stated here on the
-      ground space [0,1]. The entropy printed in Section 12.2 has the opposite
-      sign; this package uses entropy = -KL and does not formalize the printed
-      sign.
+      Discrete Analysis 2023:8. This package adapts Definitions 3.3, 3.5, 3.7,
+      4.1-4.3 and Section 2.4.1 to the ground space [0,1], and states and
+      derives a sign-adjusted version of Conjecture 12.4 (arXiv v3; 12.5 in v2)
+      as a principal result. The entropy printed in Section 12.2 has the
+      opposite sign; this package uses entropy = -KL and does not formalize the
+      printed sign. The transport to an arbitrary separable atomless ground
+      space is not formalized.
 
 related_formalizations:
   - id: "https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/ec7025d0ecc2292292f3928183e9f03db420f379"
