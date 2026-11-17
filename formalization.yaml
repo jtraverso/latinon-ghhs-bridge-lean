@@ -1,0 +1,110 @@
+version: v0.4
+project:
+  name: "The kernel and measure representations of Latinons agree"
+  description: >-
+    On the ground space [0,1], the Latinons of Garbe, Hancock, Hladky and
+    Sharifzadeh, described by Markov kernels with a measure-preserving order
+    map, and the Latinons of the Latinon preprint, described by measures on the
+    unit cube with uniform two-dimensional marginals, are the same objects up to
+    null sets. The correspondence preserves the cut distance, the pattern
+    densities and the entropy, including the value minus infinity; the entropy
+    comparison uses the conditional chain rule for relative entropy, also proved
+    here. Consequently Conjecture 12.4 of Garbe et al., stated with their own
+    definitions and with entropy taken as the negative of relative entropy,
+    follows from the counting theorem of the Latinon preprint. Both the finite
+    case and the case of supremum minus infinity are stated.
+  authors: ["Juan Pablo Traverso Gianini"]
+  responsible_maintainers: ["Juan Pablo Traverso Gianini"]
+  license: Apache-2.0
+
+classification:
+  arxiv: [math.CO, math.PR]
+  msc2020: [05B15, 60F10, 94A17]
+
+sources:
+  - title: "The kernel and measure representations of Latinons agree: a Lean formalization"
+    type: paper
+    authors: ["Juan Pablo Traverso Gianini"]
+    id: "https://www.alphaxiv.org/abs/2611.latinons-kernel-measure-lean-formalization"
+    location: "https://github.com/jtraverso/latinon-entropy-ldp/releases/tag/ghhsbridge-v1.0"
+    relationship: formalizes
+    note: >-
+      Research note, preprint 1.0, 16 November 2026: Theorems 2.1, 3.1, 4.1,
+      5.2, 6.2, 6.3 and Lemmas 5.1, 6.1. DOI 10.5281/zenodo.24293531 is
+      reserved; its Zenodo deposit was unpublished when this package was
+      prepared.
+  - title: "Entropy and large deviations for Latin squares"
+    type: paper
+    authors: ["Juan Pablo Traverso Gianini"]
+    id: "https://www.alphaxiv.org/abs/2611.latin-squares-entropy-large-deviations"
+    location: "https://github.com/jtraverso/latinon-entropy-ldp/releases/tag/latinon-v1.0"
+    relationship: formalizes
+    note: >-
+      Proposition 2.3 of this preprint (identification with the GHHS model) is
+      the result formalized here; its Theorem 2.2 supplies the counting input
+      used for Conjecture 12.4.
+  - title: "Limits of Latin squares"
+    type: paper
+    authors: ["Frederik Garbe", "Robert Hancock", "Jan Hladký", "Maryam Sharifzadeh"]
+    id: "arxiv:2010.07854"
+    relationship: background
+    author_endorsement: not-contacted
+    note: >-
+      Discrete Analysis 2023:8. Definitions 3.3, 3.5, 3.7, 4.1-4.3, Section
+      2.4.1 and Conjecture 12.4 (arXiv v3; 12.5 in v2) are stated here on the
+      ground space [0,1]. The entropy printed in Section 12.2 has the opposite
+      sign; this package uses entropy = -KL and does not formalize the printed
+      sign.
+
+related_formalizations:
+  - id: "https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/023123b8842148e3a8fb54fcb729e7998b6926d7"
+    relationship: builds-on
+    note: >-
+      The Latinon formalization, submitted to Palomar from this exact commit,
+      is a pinned Lake dependency of the Solution. The Challenge copies the
+      Latinon definitions it uses and imports only Mathlib.
+
+status:
+  scope: >-
+    Ten principal statements, six auxiliary statements used by the compared
+    definitions (the three marginal identities of kernel integration, the row
+    and column permuton lemmas, and disintegration) and five generated proof
+    certificates are compared, the certificates by their statements. The ground
+    space is [0,1]; the transport to an arbitrary separable atomless ground
+    space is not formalized.
+  sorry_count: 16
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+
+automation:
+  methods:
+    - method: manual
+    - method: agent
+      models: ["Claude", "ChatGPT/Codex"]
+      tool_setup: "Human-directed mathematical development, Lean proof implementation, tactics and editorial assistance."
+  notes: >-
+    All sixteen deliberate holes belong to the standalone BridgeChallenge only.
+    The Solution and its transitive imports contain no sorry or custom axioms.
+    Palomar packaging was prepared by static source checks, with no local Lean
+    invocation. The official full preflight runs on GitHub Actions.
+
+fidelity:
+  divergences: >-
+    The Challenge copies the GHHS and Latinon definitions with the names and
+    values used by the proved development. Lean abstracts proofs inside
+    definitions into generated certificates and reuses an identical certificate
+    within one file; the certificate of patternCellKernel is therefore named
+    explicitly with its generated name, and the definition refers to it. The
+    seven source modules receive only module-system adapters (module header,
+    public imports, exposed public section), recorded with source hashes in
+    evidence/PACKAGING.json.
+
+review:
+  status: agent-reviewed
+  reviewers: ["Claude, acting under the author's direction"]
+  notes: >-
+    The research note's frozen Lean sources compiled from scratch against the
+    Latinon 1.0 sources, and twelve axiom queries reported only the standard
+    axioms; that evidence is in the published edition and precedes this
+    module-system packaging. Only the official full GitHub preflight certifies
+    this commit. Internal checks are not independent journal peer review.

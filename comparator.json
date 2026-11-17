@@ -1,0 +1,34 @@
+{
+  "challenge_module": "BridgeChallenge",
+  "solution_module": "BridgeSolution",
+  "theorem_names": [
+    "GHHSBridge.toLatinonMeasure_ofLatinonMeasure",
+    "GHHSBridge.ofLatinonMeasure_toLatinonMeasure_kernel",
+    "GHHSBridge.ghhsCutDistance_eq",
+    "GHHSBridge.ghhsPatternDensity_eq",
+    "GHHSBridge.klDiv_compProd_right_eq_lintegral",
+    "GHHSBridge.ghhsEntropy_eq",
+    "GHHSBridge.ghhsEntSup_eq",
+    "GHHSBridge.ghhsConjecture_12_4",
+    "GHHSBridge.ghhsConjecture_12_4_bot",
+    "GHHSBridge.ghhsConjecture_12_4_bot'",
+    "GHHSBridge.GHHSLatinon.measure_xy",
+    "GHHSBridge.GHHSLatinon.measure_xz",
+    "GHHSBridge.GHHSLatinon.measure_yz",
+    "GHHSBridge.ae_row_permuton_of_xz",
+    "GHHSBridge.ae_col_permuton_of_yz",
+    "LatinonEntropy.latinonSymbolKernel_reconstruct",
+    "LatinonEntropy.latinonSymbolKernel._proof_1",
+    "LatinonEntropy.uniformLatinonMeasure._proof_1",
+    "LatinonEntropy.uniformLatinonMeasure._proof_2",
+    "LatinonEntropy.uniformLatinonMeasure._proof_3",
+    "GHHSBridge.patternCellKernel._proof_1"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}

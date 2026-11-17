@@ -1,0 +1,83 @@
+{
+  "source_archive": "GHHSBridge_Lean_v1.0.zip (preprints/GHHSBRIDGE/05_formalization in jtraverso/latinon-entropy-ldp)",
+  "source_archive_sha256": "0d57b90aaacc593d51742c2ebeb17dccbcf6152c9711a36bfa04b9d2b53ab025",
+  "latinon_dependency": {
+    "repository": "https://github.com/jtraverso/latinon-entropy-ldp-lean",
+    "commit": "023123b8842148e3a8fb54fcb729e7998b6926d7",
+    "note": "Commit submitted to Palomar with a passing full preflight (run 43981220825)."
+  },
+  "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "modules": [
+    {
+      "module": "GHHSBridge.Conjecture",
+      "frozen_sha256": "9e0e4f66e4b192da80dc78a83522bc16d5257cc8b87415af861d423063c70b4e",
+      "ported_sha256": "adba6989466cd048ae64f147c3133e7d04baa2958bcdcde65b4664b6f148a066",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.Defs",
+      "frozen_sha256": "e1396e0c7ac855515d4ce7a06d7507e6ec7bd4288f1986a0bb8950a307d8495e",
+      "ported_sha256": "b9ddee5be2187d0175741bdd143935d004f157390f40c88730977a960d8ca6b1",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.Distance",
+      "frozen_sha256": "635027a71fd4c2482f4a3caa26eda431e6af0c34767c2525a89c1adf3def5f0e",
+      "ported_sha256": "51eb4d3d4e240176b64871bfdbe2eda3c6531ef448eb31944e81004e533f5505",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.Entropy",
+      "frozen_sha256": "53f58dacef514913034767d430d149bcf207a287d19b34abf4eb7ccfe50a9800",
+      "ported_sha256": "6671a418b08dbcf87571da94af9bf81dcd5e99c08c1b433c98b431b9b2be6083",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.OfMeasure",
+      "frozen_sha256": "7aa7c2fad1a866fc5ccc2582d81e089d2feca3854d1cd975777cc840c65d6baa",
+      "ported_sha256": "81c4db0786a8b9ce6b2f4d5fab9c5f91af527b24e51c090e166fa3bc68e9fba3",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.Patterns",
+      "frozen_sha256": "9efb4040f76fc410461835134406751df4fc3d37b84e720b80c68d3aa04f479e",
+      "ported_sha256": "f23879256549948136f9b35ad433a0123099806022e885da79f9992d031b3c00",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    },
+    {
+      "module": "GHHSBridge.ToMeasure",
+      "frozen_sha256": "e44b7b49477c5fe3d5bc2a36c3d8057affb82dc7e940754a0b08b220872cc989",
+      "ported_sha256": "c0e664f2c955c306184c83f54f767a0d0e751750744490fcac50602cbc052271",
+      "adapters": [
+        "module header",
+        "public imports",
+        "exposed public section"
+      ]
+    }
+  ],
+  "scope": "Module-system adapters only; proof bodies and statements of the frozen modules are unchanged."
+}
