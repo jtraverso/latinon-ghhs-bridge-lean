@@ -19,9 +19,10 @@
     "GHHSBridge.ae_col_permuton_of_yz",
     "LatinonEntropy.latinonSymbolKernel_reconstruct",
     "LatinonEntropy.latinonSymbolKernel._proof_1",
-    "LatinonEntropy.uniformLatinonMeasure._proof_1",
-    "LatinonEntropy.uniformLatinonMeasure._proof_2",
-    "LatinonEntropy.uniformLatinonMeasure._proof_3",
+    "LatinonEntropy.uniformLatinonMeasure_order_preserving",
+    "LatinonEntropy.uniformLatinonMeasure_xy_uniform",
+    "LatinonEntropy.uniformLatinonMeasure_xz_uniform",
+    "LatinonEntropy.uniformLatinonMeasure_yz_uniform",
     "GHHSBridge.patternCellKernel._proof_1"
   ],
   "definition_names": [],

@@ -3,8 +3,8 @@
   "source_archive_sha256": "0d57b90aaacc593d51742c2ebeb17dccbcf6152c9711a36bfa04b9d2b53ab025",
   "latinon_dependency": {
     "repository": "https://github.com/jtraverso/latinon-entropy-ldp-lean",
-    "commit": "023123b8842148e3a8fb54fcb729e7998b6926d7",
-    "note": "Commit submitted to Palomar with a passing full preflight (run 43981220825)."
+    "commit": "ec7025d0ecc2292292f3928183e9f03db420f379",
+    "note": "Commit with a passing full Palomar preflight (run 44016846188); named certificates for Palomar rendering."
   },
   "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules": [

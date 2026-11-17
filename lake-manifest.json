@@ -7,10 +7,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "023123b8842148e3a8fb54fcb729e7998b6926d7",
+      "rev": "ec7025d0ecc2292292f3928183e9f03db420f379",
       "name": "LatinonEntropy",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "023123b8842148e3a8fb54fcb729e7998b6926d7",
+      "inputRev": "ec7025d0ecc2292292f3928183e9f03db420f379",
       "inherited": false,
       "configFile": "lakefile.toml"
     },

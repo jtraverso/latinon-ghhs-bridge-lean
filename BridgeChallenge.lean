@@ -55,20 +55,42 @@ instance instIsProbabilityMeasureLatinonPointMeasure (W : LatinonMeasure) : IsPr
     have h := W.xy_uniform Set.univ Set.univ MeasurableSet.univ MeasurableSet.univ
     simpa only [Set.univ_prod_univ,measure_univ,mul_one] using h
 
+/-- The identity order of the uniform Latinon preserves Lebesgue measure. -/
+theorem uniformLatinonMeasure_order_preserving : MeasurePreserving (id : I → I) volume volume :=
+  MeasurePreserving.id volume
+
+/-- Row-column marginal of the uniform cube measure. -/
+theorem uniformLatinonMeasure_xy_uniform : ∀ (S T : Set I), MeasurableSet S → MeasurableSet T →
+    @DFunLike.coe (Measure LatinonPoint) (Set LatinonPoint) (fun _ => ENNReal) _
+      (((volume : Measure I).prod volume).prod volume) ((S ×ˢ T) ×ˢ Set.univ) =
+      volume S * volume T := by
+  intro S T _ _
+  simp only [Measure.prod_prod,measure_univ,mul_one]
+
+/-- Row-symbol marginal of the uniform cube measure. -/
+theorem uniformLatinonMeasure_xz_uniform : ∀ (S U : Set I), MeasurableSet S → MeasurableSet U →
+    @DFunLike.coe (Measure LatinonPoint) (Set LatinonPoint) (fun _ => ENNReal) _
+      (((volume : Measure I).prod volume).prod volume) ((S ×ˢ Set.univ) ×ˢ U) =
+      volume S * volume U := by
+  intro S U _ _
+  simp only [Measure.prod_prod,measure_univ,mul_one]
+
+/-- Column-symbol marginal of the uniform cube measure. -/
+theorem uniformLatinonMeasure_yz_uniform : ∀ (T U : Set I), MeasurableSet T → MeasurableSet U →
+    @DFunLike.coe (Measure LatinonPoint) (Set LatinonPoint) (fun _ => ENNReal) _
+      (((volume : Measure I).prod volume).prod volume) ((Set.univ ×ˢ T) ×ˢ U) =
+      volume T * volume U := by
+  intro T U _ _
+  simp only [Measure.prod_prod,measure_univ,one_mul]
+
 /-- Uniform cube measure with identity order. -/
 def uniformLatinonMeasure : LatinonMeasure where
   measure := ((volume : Measure I).prod volume).prod volume
   order := id
-  order_preserving := MeasurePreserving.id volume
-  xy_uniform := by
-    intro S T _ _
-    simp only [Measure.prod_prod,measure_univ,mul_one]
-  xz_uniform := by
-    intro S U _ _
-    simp only [Measure.prod_prod,measure_univ,mul_one]
-  yz_uniform := by
-    intro T U _ _
-    simp only [Measure.prod_prod,measure_univ,one_mul]
+  order_preserving := uniformLatinonMeasure_order_preserving
+  xy_uniform := uniformLatinonMeasure_xy_uniform
+  xz_uniform := uniformLatinonMeasure_xz_uniform
+  yz_uniform := uniformLatinonMeasure_yz_uniform
 
 /-- A measurable, measure-preserving bijection of the unit interval. -/
 structure LatinonRelabel where
@@ -176,8 +198,23 @@ def orderPatternRealizations {k l : ℕ} (P : LatinOrderPattern k l) :
     Set ((Fin k × Fin l) → ℝ) :=
   {v | ∀ a b, P a < P b → v a < v b}
 
+/-- Standard Borel certificate used by `latinonSymbolKernel`. In the source module Lean
+generates it from the first instance argument of `condKernel`; here it is named explicitly,
+with the statement computed through the same unification as `condKernel`'s binders, and
+used as the instance. Compared by its statement. -/
+theorem latinonSymbolKernel._proof_1 :
+    type_of% ((fun {α Ω : Type} {mα : MeasurableSpace α} {mΩ : MeasurableSpace Ω}
+      (_ρ : Measure (α × Ω)) (h : StandardBorelSpace Ω) => h)
+      uniformLatinonMeasure.measure inferInstance) :=
+  inferInstance
+
+section
+attribute [local instance 2000] latinonSymbolKernel._proof_1
+
 /-- Canonical conditional symbol kernel obtained by disintegration of the cube measure. -/
 def latinonSymbolKernel (W : LatinonMeasure) : Kernel (I × I) I := W.measure.condKernel
+
+end
 
 instance latinonSymbolKernel_markov (W : LatinonMeasure) : IsMarkovKernel (latinonSymbolKernel W) := by
   unfold latinonSymbolKernel

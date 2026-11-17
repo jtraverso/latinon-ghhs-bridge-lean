@@ -15,7 +15,7 @@ entropy.
 `BridgeChallenge.lean` is the standalone, Mathlib-only statement interface. `BridgeSolution.lean`
 re-exports the proved declarations through the aggregate `GHHSBridge`. The Latinon formalization
 is a pinned Lake dependency
-([`jtraverso/latinon-entropy-ldp-lean@023123b`](https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/023123b8842148e3a8fb54fcb729e7998b6926d7)).
+([`jtraverso/latinon-entropy-ldp-lean@ec7025d`](https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/ec7025d0ecc2292292f3928183e9f03db420f379)).
 
 ## Compared claims
 

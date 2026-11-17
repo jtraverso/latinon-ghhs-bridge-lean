@@ -57,10 +57,10 @@ sources:
       sign.
 
 related_formalizations:
-  - id: "https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/023123b8842148e3a8fb54fcb729e7998b6926d7"
+  - id: "https://github.com/jtraverso/latinon-entropy-ldp-lean/tree/ec7025d0ecc2292292f3928183e9f03db420f379"
     relationship: builds-on
     note: >-
-      The Latinon formalization, submitted to Palomar from this exact commit,
+      The Latinon formalization, with a passing full Palomar preflight at this exact commit,
       is a pinned Lake dependency of the Solution. The Challenge copies the
       Latinon definitions it uses and imports only Mathlib.
 
