@@ -19,7 +19,7 @@ rev = "023123b8842148e3a8fb54fcb729e7998b6926d7"
 [[lean_lib]]
 name = "GHHSBridge"
 roots = ["GHHSBridge"]
-globs = ["GHHSBridge.+"]
+globs = ["GHHSBridge", "GHHSBridge.+"]
 
 [[lean_lib]]
 name = "BridgeChallenge"
